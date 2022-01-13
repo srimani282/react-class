@@ -1,47 +1,76 @@
-import React from "react";
+import React, { useState, useEffect, Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import HomePage from "./Components/HomePage";
 
-const con1 = "jhabcj";
+// function App() {
+//   const [counter, setcounter] = useState(0);
 
-function App() {
-  const std = "10th";
+//   const handlecounter = () => {
+//     setcounter(counter + 2);
+//   };
 
-  return (
-    <div className="container">
-      <HomePage name={"Samara"} />
+//   useEffect(() => {
+//     //setcounter(counter + 1);
+//   }, [counter]);
 
-      <HomePage name={"Naresh"} />
+//   const std = "10th";
 
-      <h2>Heading</h2>
-      <p>first para</p>
+//   return (
+//     <div className="container">
+//       <h1>{counter}</h1>
+//       {console.log("first")}
+//       <button onClick={handlecounter}> Counter</button>
 
-      <h3>is a boy studing {std}</h3>
+//       {counter > 6 ? (
+//         <>
+//           <h2>2 nd condition Heading when true</h2>
+//           <p>first para</p>
+//           <h3>is a boy studing {std}</h3>
+//         </>
+//       ) : (
+//         <p>Counter is still less than 6</p>
+//       )}
+//     </div>
+//   );
+// }
 
-      {con1 ? (
-        <>
-          <h2>Heading when true</h2>
-          <p>first para</p>
-          <h3>is a boy studing {std}</h3>
-        </>
-      ) : (
-        <>
-          <h2>Not True</h2>
-          <p>Failed</p>
-          <h3>is a boy studing fdailed</h3>
-        </>
-      )}
+// export default App;
 
-      {con1 ? (
-        <>
-          <h2>2 nd condition Heading when true</h2>
-          <p>first para</p>
-          <h3>is a boy studing {std}</h3>
-        </>
-      ) : null}
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: "Jordan Belfort",
+    };
+  }
+
+  getData() {
+    setTimeout(() => {
+      console.log("Our data is fetched");
+      this.setState({
+        data: "Hello ReactFolks",
+      });
+    }, 1000);
+  }
+  //lifecycle methods
+  componentWillMount() {
+    console.log("First this called");
+  }
+
+  componentDidMount() {
+    console.log("Component  Did Mount");
+    this.getData();
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <h1>{this.state.data}</h1>
+        {console.log("first")}
+      </div>
+    );
+  }
 }
 
 export default App;
