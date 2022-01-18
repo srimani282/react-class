@@ -27,9 +27,6 @@ function App() {
           <h2>2 nd condition Heading when true</h2>
           <p>first para</p>
           <p>second para</p>
-          <p>third para</p>
-          <p>first para</p>
-          <p>lorem ipsum </p> 
           <h3>is a boy studing {std}</h3>
         </>
       ) : (
