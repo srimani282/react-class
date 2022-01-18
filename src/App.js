@@ -29,6 +29,7 @@ function App() {
           <p>second para</p>
           <p>third para</p>
           <p>first para</p>
+          <p>lorem ipsum </p> 
           <h3>is a boy studing {std}</h3>
         </>
       ) : (
