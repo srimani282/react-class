@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Component } from "react";
 import "./App.css";
 import HomePage from "./Components/HomePage";
+import PostForm from "./Components/PostForm";
 
 function App() {
   const [counter, setcounter] = useState(0);
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <div className="container">
+      < PostForm />
       <h1>{counter}</h1>
       <HomePage name="Samara" />
       {console.log("first")}
