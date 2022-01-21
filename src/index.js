@@ -4,10 +4,10 @@ import "./index.css";
 import App1 from "./App1";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App1 />
     <App />
   </React.StrictMode>,
   document.getElementById("root")
