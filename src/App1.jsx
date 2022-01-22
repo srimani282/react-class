@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
+
+
 function App1(props) {
-  const [formData, setFormData] = useState({
-    email: "",
-    name: "",
-  });
+  const [formData, setFormData] = useState({email: "",name: "",});
 
   const handleChange = (e) => {
     // if (e.target.value.length > 30) {
@@ -14,7 +13,6 @@ function App1(props) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     // }
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     //make api call here http/www.react.com/form/ , post, {formData}
