@@ -6,7 +6,6 @@ function HomePage(props) {
     <div>
       <h2>HomePage</h2>
       <p>Home Para</p>
-      <h3>{props.name}</h3>
     </div>
   );
 }
