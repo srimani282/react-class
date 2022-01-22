@@ -1,19 +1,21 @@
 import React, { useState, useEffect, Component } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Components/HomePage";
 import Navbar from "./Components/Navbar";
 import Counter from "./Components/Counter";
+import PostList from "./Components/PostList";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={Counter} />
-        <Route path="/home-page" element={HomePage} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/post-list/:id" element={<PostList />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
