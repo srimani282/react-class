@@ -1,14 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function Navbar(props) {
   return (
     <div>
       <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
-          <a class="navbar-brand" href="{{ url('/') }}">
-            Logo
-          </a>
+          <Link to="/"> Logo</Link>
           <button
             class="navbar-toggler"
             type="button"
@@ -22,23 +21,15 @@ function Navbar(props) {
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto"></ul>
-
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}">
-                  Home
-                </a>
+              <li class="nav-item mr-5">
+                <Link to="/"> Home</Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}">
-                  Bases
-                </a>
+              <li class="nav-item mr-5">
+                <Link to="/counter"> Counter</Link>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="{{ route('contacts.index') }}">
-                  Contact Us
-                </a>
+              <li class="nav-item dropdown mr-5">
+                <Link to="/post-form"> PostForm</Link>
                 <div
                   class="dropdown-menu dropdown-menu-right"
                   aria-labelledby="navbarDropdown"
